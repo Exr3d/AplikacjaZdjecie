@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:background="#808080">
+    android:background="#888884">
 
 
 
@@ -38,6 +39,7 @@
                 />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_weight="1"
@@ -49,19 +51,112 @@
                 android:layout_height="wrap_content"
                 android:text="Edycja zdjęcia"
                 android:gravity="center_horizontal"
-                android:textSize="30dp"
+                android:textSize="20dp"
                 android:layout_marginTop="20dp"
                 android:textColor="@color/white"
+                android:layout_margin="5dp"
                 />
-            <Button
-                android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Przycisk"
-                android:layout_gravity="center_horizontal"
-                android:onClick="klikTest"
+                android:text="Wysokość:"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_margin="15dp"
+                />
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="1000"
+                android:min="100"
+                android:id="@+id/seekWys"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Szerokość:"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                />
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="1000"
+                android:min="100"
+                android:id="@+id/seekWys2"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Przezroczystosc:"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                />
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="1000"
+                android:min="100"
+                android:id="@+id/seekWys3"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Filtrowanie koloru (czerwień):"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                />
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="1000"
+                android:min="100"
+                android:id="@+id/seekWys4"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Filtrowanie koloru (zieleń):"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                />
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="1000"
+                android:min="100"
+                android:id="@+id/seekWys5"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Filtrowanie koloru (niebieski):"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                />
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="1000"
+                android:min="100"
+                android:id="@+id/seekWys6"
                 />
 
+
+
         </LinearLayout>
+
 
     </LinearLayout>
 
