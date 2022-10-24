@@ -2,6 +2,7 @@ package com.example.aplikacjazdjecie;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
@@ -37,8 +38,8 @@ int alph=255;
         //obraz.setImageAlpha(50);
 
 
-        final int semiTransparentGrey = Color.argb(alph, kolorR, kolorG, kolorB);
-        obraz.setColorFilter(semiTransparentGrey, PorterDuff.Mode.SRC_ATOP);
+        //final int semiTransparentGrey = Color.argb(alph, kolorR, kolorG, kolorB);
+        //obraz.setColorFilter(semiTransparentGrey, PorterDuff.Mode.SRC_ATOP);
 
 
         SeekBar seekWys = (findViewById(R.id.seekWys));
@@ -46,20 +47,21 @@ int alph=255;
         SeekBar seekFiltrR = (findViewById(R.id.seekWys4));
         SeekBar seekFiltrG = (findViewById(R.id.seekWys5));
         SeekBar seekFiltrB = (findViewById(R.id.seekWys6));
+        SeekBar seekRotacja = (findViewById(R.id.seekRotacja));
         seekWys.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
 
 
                 wys = i;
-                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(wys, wys);
+                //LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(wys, wys);
                 //obraz.setLayoutParams(params);
 
                 //obraz.setScaleType(ImageView.ScaleType.FIT_XY);
                 //obraz.getLayoutParams().height = i;
                 //obraz.getLayoutParams().width = i;
                 //obraz.setScaleType(ImageView.ScaleType.FIT_XY);
-                testTXT.setText("fff"+i);
+                //testTXT.setText("fff"+i);
                 obraz.setScaleX(wys/10);
                 obraz.setScaleY(wys/10);
             }
@@ -96,8 +98,8 @@ int alph=255;
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 kolorR = i;
-                int semiTransparentGrey = Color.argb(alph, kolorR, kolorG, kolorB);
-                obraz.setColorFilter(semiTransparentGrey, PorterDuff.Mode.SRC_ATOP);
+                int semiTransparentGrey = Color.rgb(kolorR, kolorG, kolorB);
+                obraz.setColorFilter(semiTransparentGrey, PorterDuff.Mode.MULTIPLY);
             }
 
             @Override
@@ -116,7 +118,7 @@ int alph=255;
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 kolorG = i;
                 int semiTransparentGrey = Color.argb(alph, kolorR, kolorG, kolorB);
-                obraz.setColorFilter(semiTransparentGrey, PorterDuff.Mode.SRC_ATOP);
+                obraz.setColorFilter(semiTransparentGrey, PorterDuff.Mode.MULTIPLY);
             }
 
             @Override
@@ -135,7 +137,23 @@ int alph=255;
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 kolorB = i;
                 int semiTransparentGrey = Color.rgb(kolorR, kolorG, kolorB);
-                obraz.setColorFilter(semiTransparentGrey, PorterDuff.Mode.SRC_ATOP);
+                obraz.setColorFilter(semiTransparentGrey, PorterDuff.Mode.MULTIPLY);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+        seekRotacja.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                    obraz.setRotation(i);
             }
 
             @Override

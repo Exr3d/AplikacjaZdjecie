@@ -26,8 +26,7 @@
                 android:textSize="25dp"
                 android:textColor="@color/white"
                 />
-            //max wysokosc obrazka 330 dp
-            //minimalna 30
+
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
@@ -52,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:text="Edycja zdjęcia"
                 android:gravity="center_horizontal"
-                android:textSize="20dp"
+                android:textSize="18dp"
                 android:layout_marginTop="20dp"
                 android:textColor="@color/white"
                 android:layout_margin="5dp"
@@ -65,7 +64,7 @@
                 android:textColor="@color/white"
                 android:textSize="15dp"
                 android:gravity="center"
-                android:layout_margin="15dp"
+                android:layout_margin="5dp"
                 />
             <SeekBar
                 android:layout_width="match_parent"
@@ -81,7 +80,7 @@
                 android:textColor="@color/white"
                 android:textSize="15dp"
                 android:gravity="center"
-                android:layout_margin="5dp"
+                android:layout_margin="2dp"
                 />
             <SeekBar
                 android:layout_width="match_parent"
@@ -98,7 +97,7 @@
                 android:textColor="@color/white"
                 android:textSize="15dp"
                 android:gravity="center"
-                android:layout_margin="5dp"
+                android:layout_margin="2dp"
                 />
             <SeekBar
                 android:layout_width="match_parent"
@@ -115,7 +114,7 @@
                 android:textColor="@color/white"
                 android:textSize="15dp"
                 android:gravity="center"
-                android:layout_margin="5dp"
+                android:layout_margin="2dp"
                 />
             <SeekBar
                 android:layout_width="match_parent"
@@ -132,7 +131,7 @@
                 android:textColor="@color/white"
                 android:textSize="15dp"
                 android:gravity="center"
-                android:layout_margin="5dp"
+                android:layout_margin="2dp"
                 />
             <SeekBar
                 android:layout_width="match_parent"
@@ -141,6 +140,23 @@
                 android:progress="255"
                 android:min="0"
                 android:id="@+id/seekWys6"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rotacja:"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_margin="2dp"
+                />
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="360"
+                android:progress="0"
+                android:min="0"
+                android:id="@+id/seekRotacja"
                 />
 
 
